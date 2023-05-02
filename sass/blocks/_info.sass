@@ -1,0 +1,32 @@
+.info
+  position: relative
+  padding-top: 200px
+  padding-bottom: 200px
+  &__title
+    justify-content: flex-start
+    position: relative
+    margin-bottom: 100px
+    &::after
+      content: "/"
+      position: absolute
+      bottom: -30px
+      right: 60px
+      color: $base-color
+      font-weight: 600
+      font-size: 72px
+      line-height: 1.18
+  &__left
+   max-width: 50%
+  &__text
+    padding-right: 100px
+    margin-bottom: 30px
+  &__right
+    position: absolute
+    top: 0
+    right: 0
+    background-image: url('/img/bcg-info.png')
+    background-size: cover
+    background-repeat: no-repeat
+    // background-position: 100% 50%
+    max-width: 960px
+    overflow: hidden

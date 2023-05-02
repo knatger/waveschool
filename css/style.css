@@ -10,28 +10,28 @@ body {
 }
 
 .container {
+  width: 100%;
   max-width: 1200px;
   margin: auto;
 }
 
 h1, h2 {
-  display: flex;
-  justify-content: center;
   font-family: Raleway, san-serif;
   color: #01353E;
   text-transform: uppercase;
+  text-align: center;
 }
 
 h1 {
   font-weight: 700;
   font-size: 200px;
-  line-height: 235px;
+  line-height: 1.175;
 }
 
 h2 {
   font-weight: 600;
   font-size: 48px;
-  line-height: 56px;
+  line-height: 1.2;
 }
 
 a {
@@ -41,7 +41,7 @@ a {
 
 p {
   font-size: 14px;
-  line-height: 18px;
+  line-height: 1.3;
   font-weight: 300;
   margin: 0;
 }
@@ -400,9 +400,9 @@ template {
 .header {
   position: relative;
   min-height: 1080px;
-  background-image: linear-gradient(to bottom, #01353E 0%, rgba(51, 51, 51, 0.5951) 31.64%, rgba(51, 51, 51, 0.2226) 74.35%, rgba(51, 51, 51, 0) 99.87%), url("/img/bcg-hero.jfif");
+  background-image: linear-gradient(to bottom, #01353E 0%, rgba(51, 51, 51, 0.5951) 31.64%, rgba(51, 51, 51, 0.2226) 74.35%, rgba(51, 51, 51, 0) 99.87%), url("/img/bcg-hero.png");
   background-size: 100% 45%, cover;
-  background-position: 0 0, 100% 100%;
+  background-position: 0 0, 50% 50%;
   background-repeat: no-repeat;
 }
 .header__icon {
@@ -417,7 +417,7 @@ template {
   justify-content: center;
   font-weight: 400;
   font-size: 24px;
-  line-height: 28px;
+  line-height: 1.17;
 }
 
 .nav {
@@ -461,7 +461,7 @@ template {
   color: #00B2A0;
   font-weight: 600;
   font-size: 72px;
-  line-height: 85px;
+  line-height: 1.18;
 }
 .about__wrapper {
   display: grid;
@@ -486,7 +486,7 @@ template {
   color: #00B2A0;
   font-weight: 600;
   font-size: 72px;
-  line-height: 85px;
+  line-height: 1.18;
 }
 .services__wrapper {
   display: grid;
@@ -528,7 +528,7 @@ template {
 }
 .services__subtitle {
   font-size: 24px;
-  line-height: 28px;
+  line-height: 1.17;
   text-transform: uppercase;
   vertical-align: middle;
   max-width: 150px;
@@ -559,7 +559,7 @@ template {
   bottom: 5px;
   left: 0;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 1.3;
   font-weight: 300;
 }
 .services__raiting--per {
@@ -569,7 +569,7 @@ template {
   right: 0;
   font-weight: 400;
   font-size: 24px;
-  line-height: 18px;
+  line-height: 1.17;
 }
 .services__raiting--85 {
   width: 200px;
@@ -589,4 +589,82 @@ template {
 }
 .services__description p {
   margin-bottom: 30px;
+}
+
+.info {
+  position: relative;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+.info__title {
+  justify-content: flex-start;
+  position: relative;
+  margin-bottom: 100px;
+}
+.info__title::after {
+  content: "/";
+  position: absolute;
+  bottom: -30px;
+  right: 60px;
+  color: #00B2A0;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 1.18;
+}
+.info__left {
+  max-width: 50%;
+}
+.info__text {
+  padding-right: 100px;
+  margin-bottom: 30px;
+}
+.info__right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url("/img/bcg-info.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 960px;
+  overflow: hidden;
+}
+
+@media (max-width: 1800px) {
+  .info__right {
+    max-width: 800px;
+  }
+}
+@media (max-width: 1500px) {
+  .info__right {
+    max-width: 650px;
+  }
+}
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+  .about__title::after {
+    right: 30px;
+  }
+  .info__right {
+    max-width: 500px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 850px;
+  }
+  h1 {
+    font-size: 150px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  .about__title::after {
+    font-size: 54px;
+    right: 40px;
+  }
+  .info__right {
+    max-width: 350px;
+  }
 }/*# sourceMappingURL=style.css.map */
