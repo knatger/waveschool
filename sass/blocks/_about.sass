@@ -1,0 +1,19 @@
+.about
+  margin-bottom: 200px
+  &__title
+    position: relative
+    margin-top: 200px
+    margin-bottom: 100px
+    &::after
+      content: "/"
+      position: absolute
+      bottom: -30px
+      right: 130px
+      color: $base-color
+      font-weight: 600
+      font-size: 72px
+      line-height: 85px
+  &__wrapper
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 30px 120px
